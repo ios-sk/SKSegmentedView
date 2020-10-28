@@ -98,10 +98,6 @@ class SKSegmentedView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        SKPrint("释放")
-    }
-    
     // 设置 tabbar 和 rootScrollView 的frame
     private func setupFrameOfTabBarAndContentView() {
         setupFrameOfTabBarAndContentView(menuViewHeight: SKSegmentedView.menuViewHeight)
@@ -132,7 +128,7 @@ class SKSegmentedView: UIView {
     
     private func updateContentViewsFrame() {
         
-        rootScrollView.contentSize = CGSize.init(width: rootScrollView.size.width * CGFloat(viewControllers.count), height: rootScrollView.size.height)
+        rootScrollView.contentSize = CGSize.init(width: rootScrollView.frame.size.width * CGFloat(viewControllers.count), height: rootScrollView.frame.size.height)
         
         for (index, vc) in viewControllers.enumerated() {
             if vc.isViewLoaded {
@@ -144,7 +140,7 @@ class SKSegmentedView: UIView {
     
     /// 根据下标获取vc的frame
     private func getControllerFrame(at index: Int) -> CGRect {
-        return CGRect.init(x: CGFloat(index) * rootScrollView.size.width, y: 0, width: rootScrollView.size.width, height: rootScrollView.size.height)
+        return CGRect.init(x: CGFloat(index) * rootScrollView.frame.size.width, y: 0, width: rootScrollView.frame.size.width, height: rootScrollView.frame.size.height)
     }
     
 }

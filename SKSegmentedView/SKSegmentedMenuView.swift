@@ -314,10 +314,6 @@ class SKSegmentedMenuView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    deinit {
-        SKPrint("释放")
-    }
-    
     private func internalInit() {
         backgroundColor = .white
     }

@@ -14,10 +14,10 @@
 		61B2965125481E75009020E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61B2964F25481E75009020E4 /* LaunchScreen.storyboard */; };
 		61B2965C25481E75009020E4 /* SegmentedViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2965B25481E75009020E4 /* SegmentedViewDemoTests.swift */; };
 		61B2966725481E76009020E4 /* SegmentedViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2966625481E76009020E4 /* SegmentedViewDemoUITests.swift */; };
-		61B2968225482347009020E4 /* SKSegmentedCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2967E25482347009020E4 /* SKSegmentedCustom.swift */; };
-		61B2968325482347009020E4 /* SKSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2967F25482347009020E4 /* SKSegmentedView.swift */; };
-		61B2968425482347009020E4 /* SKSegmentedMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2968025482347009020E4 /* SKSegmentedMenuView.swift */; };
-		61B2968525482347009020E4 /* SKSegmentedMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B2968125482347009020E4 /* SKSegmentedMenuItem.swift */; };
+		61B296F825490C54009020E4 /* SKSegmentedCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B296F425490C54009020E4 /* SKSegmentedCustom.swift */; };
+		61B296F925490C54009020E4 /* SKSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B296F525490C54009020E4 /* SKSegmentedView.swift */; };
+		61B296FA25490C54009020E4 /* SKSegmentedMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B296F625490C54009020E4 /* SKSegmentedMenuView.swift */; };
+		61B296FB25490C54009020E4 /* SKSegmentedMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B296F725490C54009020E4 /* SKSegmentedMenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +51,10 @@
 		61B2966225481E76009020E4 /* SegmentedViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegmentedViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B2966625481E76009020E4 /* SegmentedViewDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewDemoUITests.swift; sourceTree = "<group>"; };
 		61B2966825481E76009020E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61B2967E25482347009020E4 /* SKSegmentedCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedCustom.swift; sourceTree = "<group>"; };
-		61B2967F25482347009020E4 /* SKSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedView.swift; sourceTree = "<group>"; };
-		61B2968025482347009020E4 /* SKSegmentedMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedMenuView.swift; sourceTree = "<group>"; };
-		61B2968125482347009020E4 /* SKSegmentedMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedMenuItem.swift; sourceTree = "<group>"; };
+		61B296F425490C54009020E4 /* SKSegmentedCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedCustom.swift; sourceTree = "<group>"; };
+		61B296F525490C54009020E4 /* SKSegmentedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedView.swift; sourceTree = "<group>"; };
+		61B296F625490C54009020E4 /* SKSegmentedMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedMenuView.swift; sourceTree = "<group>"; };
+		61B296F725490C54009020E4 /* SKSegmentedMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSegmentedMenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 		61B2963825481E71009020E4 = {
 			isa = PBXGroup;
 			children = (
-				61B2967D25482347009020E4 /* SKSegmentedView */,
+				61B296F325490C54009020E4 /* SKSegmentedView */,
 				61B2964325481E71009020E4 /* SegmentedViewDemo */,
 				61B2965A25481E75009020E4 /* SegmentedViewDemoTests */,
 				61B2966525481E76009020E4 /* SegmentedViewDemoUITests */,
@@ -134,15 +134,16 @@
 			path = SegmentedViewDemoUITests;
 			sourceTree = "<group>";
 		};
-		61B2967D25482347009020E4 /* SKSegmentedView */ = {
+		61B296F325490C54009020E4 /* SKSegmentedView */ = {
 			isa = PBXGroup;
 			children = (
-				61B2967E25482347009020E4 /* SKSegmentedCustom.swift */,
-				61B2967F25482347009020E4 /* SKSegmentedView.swift */,
-				61B2968025482347009020E4 /* SKSegmentedMenuView.swift */,
-				61B2968125482347009020E4 /* SKSegmentedMenuItem.swift */,
+				61B296F425490C54009020E4 /* SKSegmentedCustom.swift */,
+				61B296F525490C54009020E4 /* SKSegmentedView.swift */,
+				61B296F625490C54009020E4 /* SKSegmentedMenuView.swift */,
+				61B296F725490C54009020E4 /* SKSegmentedMenuItem.swift */,
 			);
-			path = SKSegmentedView;
+			name = SKSegmentedView;
+			path = ../SKSegmentedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,12 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61B2968425482347009020E4 /* SKSegmentedMenuView.swift in Sources */,
 				61B2964925481E71009020E4 /* ViewController.swift in Sources */,
+				61B296FA25490C54009020E4 /* SKSegmentedMenuView.swift in Sources */,
+				61B296F925490C54009020E4 /* SKSegmentedView.swift in Sources */,
+				61B296F825490C54009020E4 /* SKSegmentedCustom.swift in Sources */,
+				61B296FB25490C54009020E4 /* SKSegmentedMenuItem.swift in Sources */,
 				61B2964525481E71009020E4 /* AppDelegate.swift in Sources */,
-				61B2968525482347009020E4 /* SKSegmentedMenuItem.swift in Sources */,
-				61B2968225482347009020E4 /* SKSegmentedCustom.swift in Sources */,
-				61B2968325482347009020E4 /* SKSegmentedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -441,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -459,10 +460,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BF4354G265;
 				INFOPLIST_FILE = SegmentedViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sk.SegmentedViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -478,10 +481,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BF4354G265;
 				INFOPLIST_FILE = SegmentedViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sk.SegmentedViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
