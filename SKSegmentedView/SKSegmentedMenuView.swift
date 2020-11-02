@@ -257,11 +257,19 @@ class SKSegmentedMenuView: UIView {
         
         let item = menuItems[index]
         
-        let width = ((menuViewCustom.itemSlelectdFixedWidth != 0) ? CGFloat(menuViewCustom.itemSlelectdFixedWidth) : item.frameWithOutTransform.size.width) - itemSelectedBgInsets.left - itemSelectedBgInsets.right;
-        let height = item.frameWithOutTransform.size.height - itemSelectedBgInsets.top - itemSelectedBgInsets.bottom;
+        var x = item.frameWithOutTransform.origin.x + itemSelectedBgInsets.left
+        let y = item.frameWithOutTransform.origin.y + itemSelectedBgInsets.top
+        var width = item.frameWithOutTransform.size.width - itemSelectedBgInsets.left - itemSelectedBgInsets.right
+        let height = item.frameWithOutTransform.size.height - itemSelectedBgInsets.top - itemSelectedBgInsets.bottom
         
-        itemSelectedBgImageView.frame = CGRect.init(x: item.frameWithOutTransform.origin.x + itemSelectedBgInsets.left + ((menuViewCustom.itemSlelectdFixedWidth != 0) ? ((item.frameWithOutTransform.size.width - CGFloat(menuViewCustom.itemSlelectdFixedWidth)) / 2) : 0),
-                                                    y: item.frameWithOutTransform.origin.y + itemSelectedBgInsets.top,
+        if menuViewCustom.itemSelectdFixedWidth > 0 {
+            x += (item.frameWithOutTransform.size.width - CGFloat(menuViewCustom.itemSelectdFixedWidth)) / 2
+            width = CGFloat(menuViewCustom.itemSelectdFixedWidth) - itemSelectedBgInsets.left - itemSelectedBgInsets.right
+        }
+        
+
+        itemSelectedBgImageView.frame = CGRect.init(x: x,
+                                                    y: y,
                                                     width: width,
                                                     height: height)
     }
@@ -382,19 +390,26 @@ class SKSegmentedMenuView: UIView {
         
         var frame = itemSelectedBgImageView.frame
         
+        var rightItemX = rightItem.frameWithOutTransform.origin.x
+        var leftItemX = leftItem.frameWithOutTransform.origin.x
         
-        let rightItemX = (rightItem.frameWithOutTransform.origin.x + ((followContent.itemSlelectdFixedWidth != 0) ? ((rightItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSlelectdFixedWidth)) / 2) : 0))
-        let leftItemX = (leftItem.frameWithOutTransform.origin.x + ((followContent.itemSlelectdFixedWidth != 0) ? ((leftItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSlelectdFixedWidth)) / 2) : 0))
+        if followContent.itemSelectdFixedWidth > 0 {
+            rightItemX += ((rightItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSelectdFixedWidth)) / 2)
+            leftItemX += ((leftItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSelectdFixedWidth)) / 2)
+        }
+        
         let xDiff = rightItemX - leftItemX
         
-        frame.origin.x = rightScale * xDiff + leftItem.frameWithOutTransform.origin.x + itemSelectedBgInsets.left + ((followContent.itemSlelectdFixedWidth != 0) ? ((leftItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSlelectdFixedWidth)) / 2) : 0)
-        
-        if followContent.itemSlelectdFixedWidth != 0{
-
-            frame.size.width = CGFloat(followContent.itemSlelectdFixedWidth) - itemSelectedBgInsets.left - itemSelectedBgInsets.right
+        if followContent.itemSelectdFixedWidth > 0{
+            
+            frame.origin.x = rightScale * xDiff + leftItem.frameWithOutTransform.origin.x + itemSelectedBgInsets.left + ((leftItem.frameWithOutTransform.size.width - CGFloat(followContent.itemSelectdFixedWidth)) / 2)
+            
+            frame.size.width = CGFloat(followContent.itemSelectdFixedWidth) - itemSelectedBgInsets.left - itemSelectedBgInsets.right
 
         } else {
 
+            frame.origin.x = rightScale * xDiff + leftItem.frameWithOutTransform.origin.x + itemSelectedBgInsets.left
+            
             let widthDiff = rightItem.frameWithOutTransform.size.width - leftItem.frameWithOutTransform.size.width
             if (widthDiff != 0) {
                 let leftSelectedBgWidth = leftItem.frameWithOutTransform.size.width - itemSelectedBgInsets.left - itemSelectedBgInsets.right

@@ -67,7 +67,7 @@ public protocol SKSegmentedMenuViewCustom: SKSegmentedMenuItemCustom{
     var itemSelectedBgRadius: Float { get }
     
     /// 选择背景的固定宽度
-    var itemSlelectdFixedWidth: Float { get }
+    var itemSelectdFixedWidth: Float { get }
 }
 
 
@@ -87,7 +87,7 @@ extension SKSegmentedMenuViewCustom {
     var itemSelectedBgImage: UIImage? { nil }
     
     var itemSelectedBgRadius: Float { 0 }
-    var itemSlelectdFixedWidth: Float { 0 }
+    var itemSelectdFixedWidth: Float { 0 }
 }
 
 public protocol SKSegmentedFollowContent: SKSegmentedMenuViewCustom {

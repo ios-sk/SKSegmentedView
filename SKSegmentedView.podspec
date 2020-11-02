@@ -18,5 +18,5 @@ Pod::Spec.new do |spec|
   spec.author       = { "ios-sk" => "luckysk@yeah.net" }
   spec.source       = { :git => "https://github.com/ios-sk/SKSegmentedView.git", :tag => "#{spec.version}" }
   spec.source_files  = "SKSegmentedView/*"
- 
+  spec.swift_version = '5.0'
 end
